@@ -1,0 +1,17 @@
+//@mixin过度：
+@mixin transform($arguments){
+    //兼容：
+    -webkit-transform: $arguments;
+    -ms-transform:$arguments;
+    -o-transform:$arguments;
+    -moz-transform:$arguments;
+    transform:$arguments;
+}
+@mixin transition($arguments:all .5s){
+    //兼容：
+    -webkit-transition: $arguments;
+    -ms-transition:$arguments;
+    -o-transition:$arguments;
+    -moz-transition:$arguments;
+    transition:$arguments;
+}

@@ -1,0 +1,10 @@
+//是css预编译器;
+//目的还是写css;
+//变量;函数;逻辑;色值运算;
+
+//变量;
+$color:#ddd;
+
+body{
+    background: $color;
+}
