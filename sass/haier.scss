@@ -240,8 +240,8 @@ body{
     height: 430px;
     padding: 15px 0;
     background: rgba(0,0,0,.6);
-    position: absolute;
-    top:40px;
+    position: relative;
+    top:0px;
     left: 0;
     font-size: 14px;
     color: #fff;
@@ -257,6 +257,23 @@ body{
     float: right;
     margin-right:12px; 
 }
+
+
+// 二级菜单
+.nav-wrap .hb-more{
+    width: 446px;
+    height: 430px;
+    background:#fff;
+    position: absolute;
+    display: none;
+    right: -446px;
+    top: 0px;
+}
+.nav-wrap .cate-hb:hover .hb-more{
+    display: block;
+    z-index: 50; 
+}
+
 .nav-bar .ul-nav{
     float: left;
     width: 740px;
@@ -278,7 +295,77 @@ body{
 .nav-bar .ul-nav li a:hover{
     color: #fff;
 }
-
+.nav-wrap .hb-more .more-lf{
+    width: 206px;
+    height: 100%;
+    float: left;
+}
+.nav-wrap .hb-more .more-lf li{
+    position: absolute;
+}
+.nav-wrap .hb-more .more-rig{
+    width: 240px;
+    height: 100%;
+    float: right;
+    background: #f0f0f0;
+}
+.hb-more .more-lf .num-door{
+    width:100%;
+    height: 40px;
+    margin:10px 0; 
+    float: left;
+    line-height: 50px;
+    text-align: center;
+}
+.hb-more .more-lf .num-door .nd-lef{
+    float: left;
+    margin: 5px 25px;
+}
+.hb-more .more-lf .num-door .nd-rit{
+    font-size: 12px;
+    color: #333;
+    float: left;
+}
+.hb-more .more-lf .num-door:hover .nd-rit{
+    color: #2979ff;
+}
+.more-rig .num-prc{
+    float: left;
+    font-size: 12px;
+    height: 104px;
+    width: 236px;
+    margin: 2px;
+    background: #fff;
+}
+.more-rig .num-prc .pri-le{
+    float: left;
+    height: 101px;
+    width: 100px;
+    margin: .5px 3px;
+}
+.more-rig .num-prc .pri-rig{
+    float: left;
+    width: 90px;
+    height: 56px;
+    color: #666;
+}
+.more-rig .num-prc .pri-rig span{
+    width: 120px;
+    display: block;
+    height: 14px;
+    line-height: 14px;
+    margin:20px 0;
+    float: left;
+}
+.more-rig .num-prc .pri-rig i{
+    display: block;
+}
+.more-rig .num-prc:hover .pri-tp{
+    color: #2979ff;
+}
+.more-rig .num-prc:hover .pri-bp{
+    color: #2979ff;
+}
 // 轮播图;
 .pd-main{
     margin-bottom: 30px;
@@ -321,7 +408,7 @@ body{
 // element.style {
 //     margin-left: -33px;
 // }
-#p-slide-thumb {
+.main-banner #list {
     margin: 0 auto;
     height: 15px;
     text-align: center;
@@ -332,7 +419,7 @@ body{
     position: absolute;
     left: 35%;
 }
-#p-slide-thumb #s-thumb {
+#list #s-thumb {
     // overflow: hidden;
     float: left;
     display: block;
@@ -965,20 +1052,365 @@ li {
     width: 100%;
     height: 48px;
     line-height: 48px;
-    margin-left: 50px;
 }
 .optimal-mod .button span{
     display: block;
     float: left;
-    // width: 148px;
-    margin: 0 50px;
-    font-size: 12px;
-    color: #666666;
+    width: 148px;
+    border-right: 1px solid rgb(250, 234, 234);
+    // margin: 0 50px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
     text-align: center;
+    background: #6e83ca;
 }
 .optimal-mod #box{
     width: 1190px;
     height: 352px;
     padding: 10px;
-    background: yellowgreen;
+    background: #fff;
+    position: relative;
 }
+.optimal-mod .optimal-item {
+    float: left;
+    width: 235px;
+    height: 166px;
+    position: relative;
+}
+.optimal-mod .album-cover img{
+    float: left;
+}
+.optimal-mod .optimal-list ul{
+    width: 940px;
+    position: absolute;
+   left: 245px;
+    top: 0;
+}
+.optimal-mod .optimal-item .dis-txt {
+    position: absolute;
+    z-index: 10;
+    width: 112px;
+    top: 25px;
+    left: 30px;
+}
+.optimal-mod .optimal-item .mod-price {
+    position: absolute;
+    z-index: 10;
+    top: 65px;
+    left: 30px;
+}
+.optimal-mod .optimal-item img {
+    position: absolute;
+    z-index: 5;
+    width: 110px;
+    height: 110px;
+    right: 10px;
+    bottom: 10px;
+}
+.optimal-mod .optimal-list{
+    position: relative;
+}
+.optimal-mod .fh_1 {
+    left:470px;
+}
+.optimal-mod .fh_2 {
+    left: 705px;
+}
+.optimal-mod .fh_3 {
+    left: 940px;
+}
+.optimal-mod .fake-border-v {
+    top: 166px;
+    width: 940px;
+    left: 0;
+}
+.fake-border-v {
+    height: 1px;
+    width: 100%;
+    float:right;
+    margin-left: 235px;
+}
+.fake-border-h, .fake-border-v {
+    position: absolute;
+    overflow: hidden;
+    background-color: #eaeaea;
+    z-index: 10;
+}
+.optimal-mod .fake-border-h {
+    top: 15px;
+    height: 308px;
+}
+.optimal-mod #box{
+    position: relative;
+}
+.optimal-mod ul li{
+    transition: .5s;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.optimal-mod ul li.active{
+    opacity: 1;
+}
+.optimal-mod .button span.active{
+    background: #c4cac7;
+    color: #fff;
+    font-size: 18px;
+}
+
+// 为您推荐
+.recommend-mod {
+    margin-bottom: 20px;
+}
+.layout-grid {
+    margin: 0 auto;
+    width: 1190px;
+}
+.recommend-mod .mod-hd {
+    background-color: #2979ff;
+}
+.mod-hd .tit {
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+.recommend-mod .mod-hd .recom-ico {
+    background-position: 0 -313px;
+}
+.mod-hd .tit-ico {
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+}
+.recommend-mod .mod-bd {
+    padding: 10px 0;
+    overflow: hidden;
+}
+.recommend-mod .mod-bd .product-dis {
+    margin: -10px 0 0 -10px;
+}
+.recommend-mod .mod-bd .product-dis li {
+    margin: 10px 0 0 10px;
+    width: 230px;
+    padding-bottom: 10px;
+    float: left;
+    height: 301px;
+    background: #fff;
+}
+.recommend-mod .mod-bd .product-dis li:hover img{
+    margin: 8px auto 26px;
+}
+.recommend-mod .mod-bd .product-dis li:hover{
+    box-shadow: 5px 5px 5px rgb(230, 220, 220);
+}
+.recommend-mod .mod-bd .product-dis a:hover{
+    color: #2979ff;
+}
+.recommend-mod .mod-bd .product-dis .dis-link, .recommend-mod .mod-bd .product-dis .dis-price {
+    padding: 10px;
+}
+.product-dis .dis-link img {
+    display: block;
+    margin: 17px auto;
+}
+.recommend-mod .product-dis .dis-txt {
+    padding: 0 10px;
+}
+.recommend-mod .mod-bd .product-dis .dis-link, .recommend-mod .mod-bd .product-dis .dis-price {
+    padding: 10px;
+}
+.mod-price {
+    font-size: 14px;
+    color: #ff4949;
+}
+.mod-price i {
+    font-family: arial;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 置顶
+.footer-mod{
+    width: 100%;
+    
+}
+.footer-mod .layout-mod{
+    width: 1190px;
+    height: 310px;
+    background: #fff;
+    margin: 0 auto;
+}
+.footer-mod .all-promise{
+    height: 104px;
+    border-bottom: 1px #eaeaea solid;
+}
+.footer-mod .ul-all-promise{
+    width: 100%;
+    padding: 35px 0 25px;
+    
+}
+.footer-mod .pro-item{
+    width: 25%;
+    position: relative;
+    float: left;
+    border-right: 1px #eaeaea solid;
+} 
+.footer-mod .pro-item a{
+    display: block;
+    padding-left: 25px;
+}
+.footer-mod .pro-item img{
+    background-position-y: -444px;
+    width: 43px;
+    height: 43px;
+    float: left;
+    margin-right: 5px;
+}
+.footer-mod .pro-item .pro-top{
+    margin-bottom: 3px;
+    color: #333;
+    font-weight: 400;
+    float: left;
+    width: 120px;
+}   
+.footer-mod .pro-inform{
+     color: #999;
+     float: left;
+}
+
+.footer-mod .service-wrap{
+    width: 1190px;
+    height: 206px;
+    padding: 20px 0 40px;
+    margin-bottom: 30px;
+}
+.service-wrap .ser-hp{
+    float: left;
+    width: 73%;
+    position: relative;
+    padding-left: 2%;
+}
+.service-wrap .ser-shopping{
+    float: left;
+    width: 20%;
+}
+.service-wrap .ser-top{
+    color: #333;
+    margin-bottom: 18px;
+}
+.service-wrap .wrap-hf{
+    line-height: 22px;
+    color: #999;
+}
+
+.service-wrap .ser-cont{
+    float: left;
+    width: 24%;
+    padding: 28px 0 0;
+}
+.service-wrap .ser-cont .ft-btn {
+    display: block;
+    width: 128px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto 24px;
+    border: 1px solid #eaeaea;
+    position: relative;
+}
+.service-wrap .ser-cont img{
+    width: 20px;
+    height: 20px;
+    margin:3px 6px 0 20px;
+    float: left;
+}
+.service-wrap .ser-cont p{
+    float: left;
+}
+
+
+.copyright-mod {
+    padding-bottom: 15px;
+}
+.layout-grid {
+    margin: 0 auto;
+    width: 1190px;
+}
+.copyright-mod .a-links {
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+.copyright-mod .a-links .links-ver {
+    background-color: #c7c7c7;
+    margin: 0 6px;
+}
+.copyright-mod p {
+    margin: 6px 0;
+    text-align: center;
+    color: #999;
+}
+element.style {
+    width: 16px;
+    vertical-align: text-bottom;
+    margin: 0 5px 0;
+}
+.copyright-mod p {
+    margin: 6px 0;
+    text-align: center;
+    color: #999;
+}
+.copyright-mod .p-all-honor {
+    margin: 36px 230px 0;
+}
+.p-all-honor img {
+    border: 0;
+    vertical-align: middle;
+    float: left;
+    margin: 0 10px;
+}
+element.style {
+    width: 16px;
+    vertical-align: text-bottom;
+    margin: 0 5px 0;
+}
+
+
+
+
+
+
+

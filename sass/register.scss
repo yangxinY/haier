@@ -1,0 +1,220 @@
+@charset 'utf-8';
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure,figcaption{margin:0;padding:0;}
+button{
+    border: none;
+}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+b,strong{font-weight:normal;}
+em,i{font-style:normal;}
+a,u{text-decoration: none;}
+img{border:0;display:block;}
+input{outline:none;}
+*{box-sizing:border-box;}
+.clearfix:after{clear:both; content:''; font-size:0; display:block; visibility:hidden; height:0}
+html,body{ height: 100%;
+    width: 100%;
+}
+*{
+    margin: auto;
+}
+body{ 	
+		font-family: "微软雅黑";
+		display: flex;
+		flex-direction: column;
+		font-size: 12px;
+    }
+#box{
+    width: 1308px;
+    height: 901px;
+}    
+.nav{
+    width: 100%;
+    height: 100px;
+    padding: 23px 40px 33px 55px;
+    background: #ffffff;
+    /* border-bottom: 10px solid #f2f2f2;
+    box-shadow: 10px 10px #f4f4f4; */
+}
+.nav .logo{
+    width: 256px;
+    height: 45px;
+    float: left;
+}
+.nav img{
+    display: block;
+    float: left;
+}
+.nav h2{
+    width: 95px;
+    font-size: 23px;
+    line-height: 45px;
+    margin-left: 18px;
+    float: right; 
+    color: #333333;
+}
+.nav .login{
+    float:right;
+    width: 160px;
+    height: 45px;
+    line-height: 45px;
+}
+.nav .login p a{
+    display: block;
+    float: left;
+    color:#999999; 
+    font-size: 16px;
+}
+.nav .login span a{
+    display: block;
+    float: right;
+    color: #ee2222;
+    font-size: 16px;
+}
+.content{
+    width: 100%;
+    height: 685px;
+}
+.content .con{
+    width: 402px;
+    height: 385px;
+    margin-top:88px;
+    margin-right: 462px;
+}
+.content .con .num{
+    width: 100%;
+    height: 23px;
+    padding: 0 6px;
+    margin-bottom:15px; 
+}
+.content .con .num p,span{
+    float: left;
+    margin: 0 7px;
+    color: #cfcfcf;
+}
+.content .con .num p{
+    border-radius: 11.5px;
+    width: 23px;
+    height: 23px;
+    border: 1px solid #cfcfcf;
+    padding: 2px 7px;
+}
+.content .con .num .cab{
+    color: #fff;
+    border: 1px solid #33bb44;
+    background: #33bb44;
+}
+.content .con .inform{
+    width: 100%;
+    height: 12px;
+    margin-bottom:55px; 
+}
+.content .con .inform p{
+    font-size: 12px;
+    color:#cfcfcf;
+    float: left;
+}
+.content .con .inform p:nth-child(1){
+    color:#33bb44; 
+}
+.content .con .inform p:nth-child(2){
+    margin: 0 106px;
+}
+.content .con .vab{
+    width: 100%;
+    height: 52px;
+    position: relative; 
+    margin-bottom: 35px;
+}
+.content .con #asd-1,#asd-2{
+    height: 100%;
+    border:1px solid #cfcfcf;
+}
+.content .con .vab #asd-1{
+    width: 110px;
+    float: left;
+    color: #666695;
+    text-align: center;   
+}
+.content .con .vab img{
+    position: absolute;
+    left: 91px;
+    top: 25px;
+}
+.content .con #asd-2{
+    width: 272px;
+    float: left; 
+    border-left: 0;
+    color: #000;
+    padding-left:20px; 
+}
+.content .con button{
+    width: 100%;
+    height: 52px;
+}
+.content .con #btn1{
+    display: block;
+    background: #fff;    
+    border: 1px solid #cfcfcf;
+    margin-bottom:35px; 
+}
+.content .con #btn1 a{
+    color: #333333;
+}
+.content .con #btn2{
+    display: block;
+    background: #e2231a;    
+    font-size: 14px;
+    margin-bottom: 29px;
+}
+.content .con #btn2 a{
+    color: #fff;
+}
+.content .con .form{
+    width: 100%;
+    height: 24px;
+    line-height: 24px; 
+}
+.content .con .form p,img,span{
+    float: left;
+}
+.content .con .form p:nth-child(1) span{
+    margin-right: 200px;
+}
+.content .con .form span a{
+    color: #333333;
+}
+footer{
+    width: 100%;
+    height: 116px;
+    padding: 34px 58px;
+}
+footer .top ul{
+    width: 836px;
+    height: 12px;
+    line-height: 12px;
+    margin-left:190px; 
+    margin-bottom: 25px;
+}
+footer .top ul li a{
+    display: block;
+    float: left;
+    margin-left:13.5px;
+    padding-right:13px; 
+    border-right: 1px solid #999999;
+    color: #999999;
+}
+footer .top ul li:nth-child(1) a{
+    margin-left:0; 
+}
+footer .top ul li:nth-child(11) a{
+    margin-right:0; 
+    border: 0;
+}
+footer .bottom{
+    width: 250px;
+    height: 12px;
+    line-height: 12px;
+    color: #999999;
+    margin-left:482px; 
+}

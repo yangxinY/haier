@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海尔登录</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="logo-top">
+            <div class="logo-left">
+                    <div class="logo">
+                        <img src="http://cdn09.ehaier.com/v4/images/index.png"/>
+                       
+                    </div>
+                    <b></b>
+            </div>
+            <div class="logo-right">
+                <a href="#">
+                    <b></b>
+                    登录页面，调查问卷
+                </a>
+            </div>
+
+    </div>
+    <div class="content">
+        <div class="content-top">
+                <div class="d1">
+                        <p>
+                            <b></b>
+                                依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版
+                                <a href="#">《海尔隐私政策》</a>
+                                已上线，将更有利于保护您的个人隐私。
+                        </p>
+            
+                    </div>
+
+        </div>
+        <div class="banner">
+            <div class="login">
+
+            </div>
+            <div class="login-form">
+                    <div class="d1">
+                            <p>
+                                
+                                <b></b>
+                            海尔不会以任何理由要求您转账汇款，谨防诈骗。
+                            </p>
+                
+                    </div>
+                    <div class="login-tab1">
+                        <a href="#">扫码登录</a>
+                    </div>
+                    <div class="login-tab2">
+                        <a href="#">账号登录</a>
+                    </div>
+
+                    <div class="login-in login-name">
+                        <p> 
+                            <b></b>
+                            <input type="text" id="name" placeholder="邮箱/用户名/已验证手机"/>
+                         
+                        </p>
+                    </div>
+                    <div class="login-in login-pwd">
+                            <p> 
+                                <b></b>
+                                <input type="password" id="pwd" placeholder="密码"/>
+                             
+                            </p>
+                    </div>
+                    <div class="forgetpwd">
+                        <a href="#">忘记密码</a>
+                    </div>
+                    <div class="loginbtn">
+                        <button id="btn">登录</button>
+
+                    </div>
+            </div>
+        </div>
+        <footer>
+                <div class="top">
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">人才招聘</a></li>
+                        <li><a href="#">商家入驻</a></li>
+                        <li><a href="#">广告服务</a></li>
+                        <li><a href="#">手机海尔</a></li>
+                        <li><a href="#">友情链接</a></li>
+                        <li><a href="#">销售联盟</a></li>
+                        <li><a href="#">海尔社区</a></li>
+                        <li><a href="#">海尔公益</a></li>
+                        <li><a href="#">English Site</a></li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <p>Copyright&copy;2004-2018 海尔JD.com版权所有</p>
+                </div>
+            </footer>
+        
+    </div>
+    <script src="ajax.js"></script>
+    <script>
+        var username = document.getElementById("name");
+        var password = document.getElementById("pwd");
+        var obtn = document.getElementById("btn");
+
+        obtn.onclick = function(){
+            var url="http://localhost:80/work/JD/php/login.php";
+            ajaxPost(url,`username=${username.value}&password=${password.value}`)
+            .then( function(res){
+                // console.log(res);
+                if(res=="登录成功"){
+                    location.href="http://localhost/work/JD/index.html"
+                }else{
+                    alert(res)
+                }
+            })
+        }   
+    </script>
+   
+    
+</body>
+</html>
