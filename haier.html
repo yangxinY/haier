@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>海尔商城</title>
     <link rel="stylesheet" href="css/haier.css">
+    <link rel="stylesheet" href="js/lunbotu.js">
 </head>
 <body>
     <!-- top-bar -->
@@ -17,9 +18,9 @@
         <ul class="bar-links">
             <li>
                 嗨，欢迎来到海尔官方商城 请
-                <a href="#">登录</a>
+                <a href="http://localhost:8888/login.html">登录</a>
                 &nbsp;|&nbsp;
-                <a href="#">免费注册</a>
+                <a href="http://localhost:8888/register.html">免费注册</a>
             </li>
             <li>
                 <a href="#">我的海尔</a>
@@ -103,14 +104,14 @@
                 </i>
             </a>
             <div class="nav-wrap">
-                <ul class="cate-form">
+                <ul class="cate-form" id="cate-fa">
                     <li class="cate-hb cate-f1">
                         <span>冰箱</span>
                         <i class="small-lo">></i>
                         
                         
                         
-                        <div class="hb-more">
+                        <div class="hb-more" id="hb-chil">
                             <div class="more-lf">
                                 <a href="#" class="num-door">
                                     <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
@@ -187,42 +188,42 @@
                                     <span class="nd-rit">三门</span>
                                 </a>
                                 <a href="#" class="num-door">
-                                    <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                    <img src="http://cdn21.ehaier.com/file/5901de4c58e1d9dd9017e095.png" class="nd-lef" alt="">
                                     <span class="nd-rit">多门</span>
                                 </a>
                                 <a href="#" class="num-door">
-                                    <img src="http://cdn21.ehaier.com/file/5901df1358e1d9dd9017e09d.png" class="nd-lef" alt="">
+                                    <img src="http://cdn21.ehaier.com/file/5901de4c58e1d9dd9017e095.png" class="nd-lef" alt="">
                                     <span class="nd-rit">对开</span>
                                 </a>
                                 <a href="#" class="num-door">
-                                    <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                    <img src="http://cdn21.ehaier.com/file/5901de4c58e1d9dd9017e095.png" class="nd-lef" alt="">
                                     <span class="nd-rit">干湿分储</span>
                                 </a>
                             </div>
                             <div class="more-rig"> 
                                 <a class="num-prc">
-                                    <img src="http://cdn22.ehaier.com/file/5ac97f303e7e1c80b732ac86.png" class="pri-le" alt="">
+                                    <img src="http://cdn21.ehaier.com/file/5aeaa83efac0d058d4bd0d4d.png" class="pri-le" alt="">
                                     <p class="pri-rig">
                                         <span class="pri-tp">BCD-470WDPG470 升十字对开</span>
                                         <i class="pri-bp">￥4699</i>
                                     </p>
                                 </a>
                                 <a class="num-prc">
-                                    <img src="http://cdn21.ehaier.com/file/5a1cff7bb702e266004ffa2f.png" class="pri-le" alt="">
+                                    <img src="http://cdn21.ehaier.com/file/5aeaa83efac0d058d4bd0d4d.png" class="pri-le" alt="">
                                     <p class="pri-rig">
                                         <span class="pri-tp">BCD-258WDVL U1 258 升三门双开</span>
                                         <i class="pri-bp">￥2799</i>
                                     </p>
                                 </a>
                                 <a class="num-prc">
-                                    <img src="http://cdn22.ehaier.com/file/5aeaa7dffac0d058d4bd0d4b.png" class="pri-le" alt="">
+                                    <img src="http://cdn21.ehaier.com/file/5aeaa83efac0d058d4bd0d4d.png" class="pri-le" alt="">
                                     <p class="pri-rig">
                                         <span class="pri-tp">BCD-470SGBA370 升变频</span>
                                         <i class="pri-bp">￥4599</i>
                                     </p>
                                 </a>
                                 <a class="num-prc">
-                                    <img src="http://cdn21.ehaier.com/file/59b8de823e7ea0831a448b46.png" class="pri-le" alt="">
+                                    <img src="http://cdn21.ehaier.com/file/5aeaa83efac0d058d4bd0d4d.png" class="pri-le" alt="">
                                     <p class="pri-rig">
                                         <span class="pri-tp">BCD-446WDPG470升风冷吹</span>
                                         <i class="pri-bp">￥4699</i>
@@ -237,7 +238,7 @@
                         <div class="hb-more">
                                 <div class="more-lf">
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901dfae58e1d9dd9017e0be.png" class="nd-lef" alt="">
                                         <span class="nd-rit">单门</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -245,7 +246,7 @@
                                         <span class="nd-rit">两门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901dfae58e1d9dd9017e0be.png" class="nd-lef" alt="">
                                         <span class="nd-rit">三门</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -253,7 +254,7 @@
                                         <span class="nd-rit">多门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901df1358e1d9dd9017e09d.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901df7a58e1d9dd9017e0ae.png" class="nd-lef" alt="">
                                         <span class="nd-rit">对开</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -270,7 +271,7 @@
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/5a1cff7bb702e266004ffa2f.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeeb513e7e17179504fa29.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-258WDVL U1 258 升三门双开</span>
                                             <i class="pri-bp">￥2799</i>
@@ -284,7 +285,7 @@
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/59b8de823e7ea0831a448b46.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeeb513e7e17179504fa29.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-446WDPG470升风冷吹</span>
                                             <i class="pri-bp">￥4699</i>
@@ -299,7 +300,7 @@
                         <div class="hb-more">
                                 <div class="more-lf">
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e004fac09a46355a5425.png" class="nd-lef" alt="">
                                         <span class="nd-rit">单门</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -311,7 +312,7 @@
                                         <span class="nd-rit">三门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e004fac09a46355a5425.png" class="nd-lef" alt="">
                                         <span class="nd-rit">多门</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -325,7 +326,7 @@
                                 </div>
                                 <div class="more-rig"> 
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5ac97f303e7e1c80b732ac86.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeee6afac0676201b8531a.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470WDPG470 升十字对开</span>
                                             <i class="pri-bp">￥4699</i>
@@ -339,7 +340,7 @@
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5aeaa7dffac0d058d4bd0d4b.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeee6afac0676201b8531a.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470SGBA370 升变频</span>
                                             <i class="pri-bp">￥4599</i>
@@ -361,7 +362,7 @@
                         <div class="hb-more">
                                 <div class="more-lf">
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e0d5fac09a46355a5439.png" class="nd-lef" alt="">
                                         <span class="nd-rit">单门</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -369,11 +370,11 @@
                                         <span class="nd-rit">两门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e0d5fac09a46355a5439.png" class="nd-lef" alt="">
                                         <span class="nd-rit">三门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e0ecfac09a46355a543b.png" class="nd-lef" alt="">
                                         <span class="nd-rit">多门</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -381,34 +382,34 @@
                                         <span class="nd-rit">对开</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e0ecfac09a46355a543b.png" class="nd-lef" alt="">
                                         <span class="nd-rit">干湿分储</span>
                                     </a>
                                 </div>
                                 <div class="more-rig"> 
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5ac97f303e7e1c80b732ac86.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5aeaa610b702f26b5d8d665f.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470WDPG470 升十字对开</span>
                                             <i class="pri-bp">￥4699</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/5a1cff7bb702e266004ffa2f.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5aeaa6703e7e4abfa760555f.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-258WDVL U1 258 升三门双开</span>
                                             <i class="pri-bp">￥2799</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5aeaa7dffac0d058d4bd0d4b.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5aeaa610b702f26b5d8d665f.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470SGBA370 升变频</span>
                                             <i class="pri-bp">￥4599</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/59b8de823e7ea0831a448b46.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5aeaa6703e7e4abfa760555f.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-446WDPG470升风冷吹</span>
                                             <i class="pri-bp">￥4699</i>
@@ -427,7 +428,7 @@
                                         <span class="nd-rit">单门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901df1358e1d9dd9017e09d.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901df4858e1d9dd9017e0a8.png" class="nd-lef" alt="">
                                         <span class="nd-rit">两门</span>
                                     </a>
                                     <a href="#" class="num-door">
@@ -435,42 +436,42 @@
                                         <span class="nd-rit">三门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901df4858e1d9dd9017e0a8.png" class="nd-lef" alt="">
                                         <span class="nd-rit">多门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901df1358e1d9dd9017e09d.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901df5db70261b69e8882db.png" class="nd-lef" alt="">
                                         <span class="nd-rit">对开</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901df5db70261b69e8882db.png" class="nd-lef" alt="">
                                         <span class="nd-rit">干湿分储</span>
                                     </a>
                                 </div>
                                 <div class="more-rig"> 
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5ac97f303e7e1c80b732ac86.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59817989fac0b011c31ac979.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470WDPG470 升十字对开</span>
                                             <i class="pri-bp">￥4699</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/5a1cff7bb702e266004ffa2f.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59817989fac0b011c31ac979.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-258WDVL U1 258 升三门双开</span>
                                             <i class="pri-bp">￥2799</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5aeaa7dffac0d058d4bd0d4b.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59817989fac0b011c31ac979.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470SGBA370 升变频</span>
                                             <i class="pri-bp">￥4599</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/59b8de823e7ea0831a448b46.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59817989fac0b011c31ac979.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-446WDPG470升风冷吹</span>
                                             <i class="pri-bp">￥4699</i>
@@ -547,54 +548,54 @@
                         <div class="hb-more">
                                 <div class="more-lf">
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e083fac09a46355a5431.png" class="nd-lef" alt="">
                                         <span class="nd-rit">单门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901df1358e1d9dd9017e09d.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e083fac09a46355a5431.png" class="nd-lef" alt="">
                                         <span class="nd-rit">两门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901deff58e1d9dd9017e097.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e083fac09a46355a5431.png" class="nd-lef" alt="">
                                         <span class="nd-rit">三门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e083fac09a46355a5431.png" class="nd-lef" alt="">
                                         <span class="nd-rit">多门</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn21.ehaier.com/file/5901df1358e1d9dd9017e09d.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e083fac09a46355a5431.png" class="nd-lef" alt="">
                                         <span class="nd-rit">对开</span>
                                     </a>
                                     <a href="#" class="num-door">
-                                        <img src="http://cdn22.ehaier.com/file/5901df0958e1d9dd9017e09a.png" class="nd-lef" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/5901e083fac09a46355a5431.png" class="nd-lef" alt="">
                                         <span class="nd-rit">干湿分储</span>
                                     </a>
                                 </div>
                                 <div class="more-rig"> 
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5ac97f303e7e1c80b732ac86.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeef09b702d89f77a99e32.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470WDPG470 升十字对开</span>
                                             <i class="pri-bp">￥4699</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/5a1cff7bb702e266004ffa2f.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeef09b702d89f77a99e32.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-258WDVL U1 258 升三门双开</span>
                                             <i class="pri-bp">￥2799</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn22.ehaier.com/file/5aeaa7dffac0d058d4bd0d4b.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeef09b702d89f77a99e32.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-470SGBA370 升变频</span>
                                             <i class="pri-bp">￥4599</i>
                                         </p>
                                     </a>
                                     <a class="num-prc">
-                                        <img src="http://cdn21.ehaier.com/file/59b8de823e7ea0831a448b46.png" class="pri-le" alt="">
+                                        <img src="http://cdn21.ehaier.com/file/59eeef09b702d89f77a99e32.png" class="pri-le" alt="">
                                         <p class="pri-rig">
                                             <span class="pri-tp">BCD-446WDPG470升风冷吹</span>
                                             <i class="pri-bp">￥4699</i>
@@ -808,39 +809,40 @@
         <div class="layout-grid  clearfix">
             <div class="banner-wrap">
                 <div class="main-banner">
-                    <div class="banner-sliderwrap clearfix">
-                        <div id="slide-each slide-each-4" style="left:0%">
-                            <ul>
-                            <li><a href="#" target="_blank" rel="nofollow" ref="ixv5-2-bn-1">
-                                <img class="child0" data-growing-idx="3" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/08/2128cc3a00e94d1285f7e4dcc29490f3.jpg" alt="甄选专场" title="甄选专场" width="952" height="430">
-                            </a></li>
-                        </div>
-                        <div id="slide-each slide-each-1" style="left:100%">
-                            <li><a href="#" target="_blank" rel="nofollow" ref="ixv5-2-bn-1">
-                                <img class="child0" data-growing-idx="0" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/09/e8844b280d224ad6bab20aa2919da02e.jpg" alt="品质生活节" title="品质生活节" width="952" height="430">
-                            </a></li>
-                        </div>
-                        <div id="slide-each slide-each-2" style="left:200%">
-                            <li><a href="#" target="_blank" rel="nofollow" ref="ixv5-2-bn-1">
-                                <img class="child0" data-growing-idx="1" src="http://cdn21.ehaier.com/file/5b04ccd33e7e48ffc5a22cad.png" alt="成套家电" title="成套家电" width="952" height="430">
-                            </a></li>
-                        </div>
-                        <div id="slide-each slide-each-3" style="left:300%">
-                            <li><a href="#" target="_blank" rel="nofollow" ref="ixv5-2-bn-1">
-                                <img class="child0" data-growing-idx="2" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/08/2128cc3a00e94d1285f7e4dcc29490f3.jpg" alt="统帅" title="统帅" width="952" height="430">
-                            </a></li>
-                        </div>
-                        <div id="slide-each slide-each-4" style="left:0%">
-                            <li><a href="#" target="_blank" rel="nofollow" ref="ixv5-2-bn-1">
-                                <img class="child0" data-growing-idx="3" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/08/2128cc3a00e94d1285f7e4dcc29490f3.jpg" alt="甄选专场" title="甄选专场" width="952" height="430">
-                            </a></li>
-                        </div>
-                        <div id="slide-each slide-each-1" style="left:400%">
-                            <li><a href="#" target="_blank" rel="nofollow" ref="ixv5-2-bn-1">
-                                <img class="child0" data-growing-idx="0" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/09/e8844b280d224ad6bab20aa2919da02e.jpg" alt="品质生活节" title="品质生活节" width="952" height="430">
-                            </a></li>
+                    <div class="banner-sliderwrap clearfix" id="show">
+                        <ul>                           
+                            <li id="slide-each">
+                                <a href="#">
+                                    <img class="child0" data-growing-idx="3" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/08/2128cc3a00e94d1285f7e4dcc29490f3.jpg" alt="甄选专场" title="甄选专场">
+                                </a>
+                            </li>                  
+                            <li id="slide-each>
+                                <a href="#">
+                                    <img class="child0" data-growing-idx="0" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/09/e8844b280d224ad6bab20aa2919da02e.jpg" alt="品质生活节" title="品质生活节">
+                                </a>
+                            </li>
+                            <li id="slide-each>
+                                <a href="#">
+                                    <img class="child0" data-growing-idx="1" src="http://cdn21.ehaier.com/file/5b04ccd33e7e48ffc5a22cad.png" alt="成套家电" title="成套家电">
+                                </a>
+                            </li>
+                            <li id="slide-each>
+                                <a href="#">
+                                    <img class="child0" data-growing-idx="2" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/08/2128cc3a00e94d1285f7e4dcc29490f3.jpg" alt="统帅" title="统帅">
+                                </a>
+                            </li>
+                            <li id="slide-each>
+                                <a href="#">
+                                    <img class="child0" data-growing-idx="3" src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/08/2128cc3a00e94d1285f7e4dcc29490f3.jpg" alt="甄选专场" title="甄选专场">
+                                </a>
+                            </li>
+                            <li id="slide-each>
+                                <a href="#">
+                                    <img class="child0"  src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/09/e8844b280d224ad6bab20aa2919da02e.jpg" alt="品质生活节" title="品质生活节">
+                                </a>
+                            </li>
                         </ul>
-                        </div>
+                        
                     </div>
                     <p id="list">
                         <button id="s-thumb"></button>
@@ -848,7 +850,7 @@
                         <button id="s-thumb"></button>
                         <button id="s-thumb"></button>
                     </p>
-                    <p id="wrapper p-slide-btn">
+                    <p id="wrap p-slide-btn">
                         <button id="left"><</button>
                         <button id="right">></button>
                     </p>
@@ -982,10 +984,11 @@
                     <span>精品推荐</span>
                 </h2>
             </div>
-            <div class="mod-bd">
+            <div class="mod-bd" id="jptj-f1">
+                <!-- css 699 -->
                 <div class="ver-left">
                     <a href="#">
-                        <img src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/10/f25a902d79334b84986f7c74a40db891.jpg" alt="精品推荐">
+                        <img src="http://cdn50.ehaier.com/shoppingmall-admin-web/indexmanagcontroller/image/2018/10/f25a902d79334b84986f7c74a40db891.jpg" id="jptj-left" alt="精品推荐">
                     </a>
                 </div>
 
@@ -1173,7 +1176,7 @@
                     <a href="#"><span>生活家电</span></a>
                 </div>
                 <ul id="box" class="clearfix">
-                    <li class="active">
+                    <li class="active" id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -1284,7 +1287,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li  id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -1395,7 +1398,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li  id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -1506,7 +1509,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -1617,7 +1620,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -1728,7 +1731,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -1839,7 +1842,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -1950,7 +1953,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li id="album-c">
                         <div class="album-cover">
                             <a href="#" target="_blank" data-growing-idx="110" rel="nofollow">
                                 <img src="http://cdn22.ehaier.com/file/5a7031e93e7e93959ca2769a.png" alt="619" title="619">
@@ -2173,7 +2176,7 @@
     </div>
         
 
-    <!-- 置顶 -->
+    
 
     <!-- footer -->
     <div class="footer-mod">
@@ -2299,133 +2302,73 @@
                         </a>
                     </p>
                 </div>
-            </div>
+    </div>
+
+
+    <!-- 置顶 -->
+    <div class="all-tipbar">
+        <span class="a-tip-servicer"></span>
+        <a href="#" class="a-backtop"></a>
+    </div>
+
+
+
+
+
     <!-- JS -->
-    <script src="common.js"></script>
-    <!-- 轮播图 -->
-    <script src="../jquery-3.3.1.js"></script>
+    
+    
+
+    <!-- 二级菜单 -->
     <script>
-        function Banner(){}
-        $.extend(Banner.prototype,{
-            // 写法是兼容的;
-            init : function(options){
-                /*
-                    {
-                       item_list : "#wrap li",
-                       left_btn : "#left",
-                       right_btn : "#right",
-                       btn_list : "#btn_list button"    
-                    }
-                */ 
-               // 所有的图片;
-               this.item_list = $(options.item_list);
-               // 左按钮 ;
-               this.left_btn = $(options.left_btn);
-               // 右按钮 ;
-               this.right_btn = $(options.right_btn);
-               // 按钮列表;
-               this.btn_list = $(options.btn_list);
-               this.nowIndex = 0;
-               // 有多少元素;
-               this.item_num = this.item_list.length;
-               this.ul = $("#show ul");
-               // 获取列表中第一个元素的宽度值;
-               this.item_width = this.item_list.width();
-                
-               if(this.left_btn.length == 0 && this.right_btn.length == 0 && this.btn_list.length == 0){
-                   this.autoPlay();
-                   return 0;
-               }
-               this.bindEvent();
-            },
-            bindEvent : function(){
-                // this.left_btn.click(this.prev.bind(this))
-                this.left_btn.click($.proxy(this.prev , this));
-                this.right_btn.click($.proxy(this.next , this));
-                this.btn_list.mouseover($.proxy(this.toIndex , this));
-            },
-            next:function(){
-                if( this.nowIndex == this.item_num - 1){
-                    this.nowIndex = 1;
-                    this.ul.css({
-                        left : 0
-                    })
-                }else{
-                    this.nowIndex ++;
-                }
-                this.animate();
-            },
-            prev:function(){
-                // console.log(this);
-                if( this.nowIndex == 0){
-                    this.nowIndex = this.item_num - 2;
-                    this.ul.css({
-                        left : -(this.item_num - 1) * this.item_width
-                    })
-                }else{
-                    this.nowIndex --;
-                }
-
-                this.animate();
-            },
-            toIndex:function(event){
-                // 要获取当前元素的下标么;
-                var target = event.target || event.srcElement;
-                // console.log(event);
-                // console.log($(target).index());
-                // index();
-                this.nowIndex = $(target).index();
-                this.animate();
-            },
-            animate:function(){
-                // console.log(this.nowIndex);
-                this.ul.stop().animate({
-                    left : -this.item_width * this.nowIndex
-                })
-                var index = this.nowIndex == this.item_num - 1 ? 0 : this.nowIndex; 
-                this.btn_list.eq(index).addClass("active")
-                .siblings("button").removeClass("active");
-            },
-            autoPlay:function(){
-                
-            }
-        })
-
-        var banner = new Banner();
-
-        banner.init({
-            item_list : "#show li",
-            left_btn : "#left",
-            right_btn : "#right",
-            btn_list : "#list button" 
-        })
-
-    </script>
-
+            // $(function(){
+            //     $("#hb-chil").hide()
+            //     $("#cate-fa").mouseover(function(){
+            //     $("#hb-chil")
+            //     .show()
+            //     .stop()
+            //     .animate({
+            //     left:"+=446",
+            //     display:"block"
+            //     },500)           
+            //     $("#cate-fa").mouseleave(function(){
+            //         $(hb-chil).hide()
+            //         .animate({
+            //             right:0,
+            //             display:"none"
+            //         },5)
+            //         })
+            //     })
+            // })
+        </script>
 
 
 
     <!-- 选项卡JS -->
-    <script src="common.js"></script>
+    <script src="jquery-3.3.1.js"></script>
     <script>
+    function $(selector){
+        var all = document.querySelectorAll(selector);
+        if(all.length > 1) return all;
+        return !all[0] ? null : all[0];
+    }
     var details=$("#box").children;
     var buttons=$("#btn span");
     //绑定事件；
-    for(var i=0;i<buttons.length;i++){//1.buttons进行循环；
-    buttons[i].index=i;//6.获取按钮的下标；
-    buttons[i].onmouseover=function(){//2.
-    for(var i = 0 ; i < buttons.length ; i ++){//4.清空；
-    buttons[i].className="";//5.
-    details[i].className="";//9.
-    //或者用：details[i].style.opacity="0";
+    for(var i=0;i<buttons.length;i++){
+    buttons[i].index=i;
+    buttons[i].onmouseover=function(){
+    for(var i = 0 ; i < buttons.length ; i ++){
+    buttons[i].className="";
+    details[i].className="";
     }
-    this.className="active";//3.知道当前的元素是谁；
-    //获取下标；
-    var index=this.index;//7.获取按钮的下标
-    details[index].className="active";//8.details对应index的下标显示出来
-    //或者用：details[index].style.opacity="1";
+    this.className="active";
+    var index=this.index;
+    details[index].className="active";
     }
     }
     </script>
+
+    
 </body>
 </html>

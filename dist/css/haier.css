@@ -265,7 +265,8 @@ body {
   top: 0px;
   left: 0;
   font-size: 14px;
-  color: #fff; }
+  color: #fff;
+  z-index: 200; }
 
 .nav-bar .cate-form span {
   margin-left: 12px; }
@@ -284,6 +285,7 @@ body {
   background: #fff;
   position: absolute;
   display: none;
+  right: 0;
   right: -446px;
   top: 0px; }
 
@@ -398,24 +400,30 @@ body {
   width: 952px;
   float: left; }
 
+.fd-left, .layout-grid-left {
+  float: left; }
+
 .main-banner {
   overflow: hidden;
   width: 100%;
   height: 430px;
   float: left; }
 
-.banner-slidewrap, #slide-each {
-  width: 100%;
+.banner-slidewrap {
+  width: 952px;
   height: 430px;
-  float: left; }
-
-.banner-slidewrap, .main-banner {
-  position: relative; }
-
-#slide-each {
-  position: absolute;
-  top: 0;
+  position: relative;
   overflow: hidden; }
+  .banner-slidewrap ul {
+    width: 5712px;
+    height: 430px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .banner-slidewrap ul li {
+      width: 952px;
+      height: 430px;
+      float: left; }
 
 .main-banner #list {
   margin: 0 auto;
@@ -426,7 +434,7 @@ body {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  left: 35%; }
+  left: 45%; }
 
 #list #s-thumb {
   float: left;
@@ -693,10 +701,16 @@ li {
   padding: 10px;
   background-color: #fff;
   overflow: hidden;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
 
 .jptj-mod .mod-bd .ver-left {
-  float: left; }
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
 
 .jptj-mod .jp-list {
   float: right;
@@ -1353,3 +1367,34 @@ element.style {
   width: 16px;
   vertical-align: text-bottom;
   margin: 0 5px 0; }
+
+.all-tipbar {
+  position: fixed;
+  right: 5px;
+  bottom: 40px;
+  width: 60px;
+  z-index: 100; }
+
+.a-tip-servicer {
+  margin-bottom: 10px;
+  background: url(../img/photo-ct.png) no-repeat; }
+
+.a-tip-servicer:hover {
+  background: url(../img/photo-ct2.png); }
+
+.a-backtop {
+  background: url(../img/photo-tp.png) no-repeat; }
+
+.a-backtop:hover {
+  background: url(../img/photo-tp2.png) no-repeat; }
+
+.a-tip-servicer, .a-backtop {
+  display: block;
+  background-color: #fff;
+  opacity: .9;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 0 0 6px #aaa;
+  background-repeat: no-repeat;
+  vertical-align: middle; }
