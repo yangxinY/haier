@@ -415,7 +415,7 @@ body {
   position: relative;
   overflow: hidden; }
   .banner-slidewrap ul {
-    width: 5712px;
+    width: 4760px;
     height: 430px;
     position: absolute;
     left: 0;
@@ -1188,23 +1188,23 @@ li {
 .recommend-mod .mod-bd {
   padding: 10px 0;
   overflow: hidden; }
-
-.recommend-mod .mod-bd .product-dis {
-  margin: -10px 0 0 -10px; }
-
-.recommend-mod .mod-bd .product-dis li {
-  margin: 10px 0 0 10px;
-  width: 230px;
-  padding-bottom: 10px;
-  float: left;
-  height: 301px;
-  background: #fff; }
-
-.recommend-mod .mod-bd .product-dis li:hover img {
-  margin: 8px auto 26px; }
-
-.recommend-mod .mod-bd .product-dis li:hover {
-  box-shadow: 5px 5px 5px #e6dcdc; }
+  .recommend-mod .mod-bd .product-dis {
+    margin: -10px auto 0;
+    width: 100%; }
+    .recommend-mod .mod-bd .product-dis li {
+      margin: 10px auto 0;
+      width: 230px;
+      padding-bottom: 10px;
+      float: left;
+      height: 301px;
+      background: #fff;
+      margin-right: 7px; }
+      .recommend-mod .mod-bd .product-dis li img {
+        margin: 10px auto 26px; }
+    .recommend-mod .mod-bd .product-dis li:hover {
+      box-shadow: 0 0 10px #ada6a6; }
+      .recommend-mod .mod-bd .product-dis li:hover img {
+        margin: 5px auto 26px; }
 
 .recommend-mod .mod-bd .product-dis a:hover {
   color: #2979ff; }

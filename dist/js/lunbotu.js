@@ -1,5 +1,3 @@
-
-      
     function Banner(){}
     $.extend(Banner.prototype,{
         //写法是兼容的；

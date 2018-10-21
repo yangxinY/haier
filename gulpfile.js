@@ -72,6 +72,12 @@ gulp.task("sass", () =>{
            .pipe(gulp.dest("dist/css"))
 })
 
+gulp.task("js", () =>{
+    return gulp.src(["js/*.js"])
+        //    .pipe(js().on("error",js.logError))
+           .pipe(gulp.dest("dist/js"))
+})
+
 //编译？es6=>es5;
 gulp.task("es6",()=>{
     return gulp.src("script/es2015/*.js")
