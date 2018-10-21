@@ -77,7 +77,7 @@ var oLis=document.getElementById("lis");
 console.log(oLis);
 
 oLis.onclick=function(evt){
-    console.log(111)
+    // console.log(111)
     var e = evt || window.event;
     var target = e.target || e.srcElement;
 //   /  var target = e.target || srcElement;
