@@ -102,25 +102,33 @@
             </footer>
         
     </div>
-    <script src="ajax.js"></script>
+   
     <script>
         var username = document.getElementById("name");
         var password = document.getElementById("pwd");
         var obtn = document.getElementById("btn");
 
         obtn.onclick = function(){
-            var url="http://localhost:80/work/JD/php/login.php";
-            ajaxPost(url,`username=${username.value}&password=${password.value}`)
-            .then( function(res){
-                // console.log(res);
-                if(res=="登录成功"){
-                    location.href="http://localhost/work/JD/index.html"
+            $.ajax({
+                url:"http://localhost:8888/proxy/localhost/php/login.php",
+
+            type:"GET",
+            data:`username=${username.value}&password=${password.value}`,
+            success:function(res){
+                   if(res=="登录成功"){
+                    location.href="haier.html"
                 }else{
                     alert(res)
                 }
+            }
+
             })
+
         }   
     </script>
+     <script src="js/jquery-3.3.1.js"></script>
+
+     <script src="js/ajax.js"></script>
    
     
 </body>

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
-    <script src="ajax.js"></script>
-    <script>
+   
+    <!-- <script>
         var oBtn=document.getElementById("btn1");
         oBtn.onclick=function(){
             var url = "http://cdn09.ehaier.com/v4/images/index.png";
@@ -18,7 +18,7 @@
                 console.log(res); 
             })
         }
-    </script>
+    </script> -->
 
     <div id="box">
         <div class="nav">
@@ -50,7 +50,7 @@
                     <img src="img/vab-1.jpg" alt="">
                     <input type="text" name="" id="asd-2" placeholder="建议使用常用手机号">
                 </div>
-                <button id="btn1"><a href="#">点击按钮进行验证</a></button>
+                <input type="text" id="password" placeholder="请输入密码"></input>
                 <button id="btn2"><a href="#">下一步</a></button>
                 <div class="form">
                     <p>
@@ -87,16 +87,39 @@
     </div>
 
     <script>
-        var oAsd=document.getElementById("asd-2");
-        var regAsd=/^[0-9]{11}$/;
-        oAsd.onblur=function(){
-        var sAsd=oAsd.value;
-            if(regAsd.test(sAsd)){
-                oAsd.style.borderColor="yellowgreen";
-            }else{
-                oAsd.style.borderColor="red";
+        var username=document.getElementById("asd-2");
+        var password = document.getElementById("password")
+        var obtn = document.getElementById("btn2")
+        // var regAsd=/^[0-9]{11}$/;
+        // oAsd.onblur=function(){
+        // var sAsd=oAsd.value;
+        //     if(regAsd.test(sAsd)){
+        //         oAsd.style.borderColor="yellowgreen";
+        //     }else{
+        //         oAsd.style.borderColor="red";
+        //     }
+        // } 
+        obtn.onclick = function(){
+            $.ajax({
+                url:"http://localhost:8888/proxy/localhost/php/register1.php",
+
+            type:"GET",
+            data:`username=${username.value}&password=${password.value}`,
+            success:function(res){
+                   if(res=="注册成功"){
+                    location.href="login.html"
+                }else{
+                    alert(res)
+                }
             }
-        } 
+
+            })
+
+        }   
     </script>
+    <script src="js/jquery-3.3.1.js"></script>
+
+    <script src="js/ajax.js"></script>
+  
 </body>
 </html>
