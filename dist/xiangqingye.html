@@ -110,21 +110,21 @@
 
     <!-- 放大镜 -->
     <div class="bigwrapper">
-        <div class="left">
+        <!-- <div class="left"> -->
             <div id="small">
                 <!--贴的膜-->
                 <div id="film"></div>	
                 <div id="frame">
                     <!-- 一个框 -->
                 </div>
-                <img src="" alt="">
+                <img src="" alt="" id="img1">
             </div>
             <div class="title"></div>
             <div class="price"></div>
-        </div>
+        <!-- </div> -->
 
         <div id="big">
-            <img src="" alt="">
+            <img src="" alt="" id="img2">
         </div>
     </div>
    
@@ -272,25 +272,57 @@
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/jquery.cookie.js"></script> 
     <script>
-        $.ajax({
-            type:"get",
-            url:"js/data.json",
-            async:true,
-            success:function(arr){
-            var oImg = document.querySelector("small")
+
+        function WaterFull() { };
+        WaterFull.prototype.init = function () {
+            this.ul = document.querySelector("#wrap ul");
+            this.page_num = 0;
+            this.rendering = false;
+            this.loadJson()
+                .then(function (data) {
+                    // console.log(this.json)
+                    // console.log(data)
+                    this.renderPage();
+                }.bind(this));
+            // this.handleEvent();
+        }
+        WaterFull.prototype.loadJson = function () {
+            return new Promise(function (success) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "data.json");
+                xhr.send(null);
+                xhr.onload = function () {
+                    if(xhr.status){
+                        this.json = JSON.parse(xhr.response);
+                        success(xhr.response);
+                    }
+                }.bind(this);
+            }.bind(this));
+        }
+
+    
+            WaterFull.prototype.renderPage = function () {
+            var oImg1 = document.getElementById("img1")
+            var oImg2 = document.getElementById("img2")
             var oTitle=document.querySelector(".title")
             var oPrice=document.querySelector(".price")                       
             var res ="";
             if(res = cookie("goodsId")){
-            oImg.src= arr[res].photo;
+
+                var arr = this.json;
+                console.log(res)
+            oImg1.src= arr[res].photo;
+            oImg2.src= arr[res].photo;
             oTitle.src=arr[res].transtion;
             oPrice.src=arr[res].price;
-            small.innerHTML=arr[res].photo;
-            title.innerHTML = arr[res].transtion;
-            price.innerHTML = arr[res].price;
+            oImg1.innerHTML=arr[res].photo;
+            oImg2.innerHTML=arr[res].photo;
+            oTitle.innerHTML = arr[res].transtion;
+            oPrice.innerHTML = arr[res].price;
             }
             }
-            })
+            var waterFull = new WaterFull();
+        waterFull.init();
     </script>  
 
 <script>

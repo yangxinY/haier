@@ -263,14 +263,31 @@ body{
 .bigwrapper{
     width: 100%;
     height: 700px;
-    background: yellowgreen;
+    position: relative;
+    .title{
+        position: absolute;
+        left: 600px;
+        top: 20px;
+        color: rgb(243, 3, 3);
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .price{
+        position: absolute;
+        left: 600px;
+        top: 80px;
+        color: rgb(31, 10, 223);
+        font-size: 14px;
+        font-weight: 400;
+    }
     #small{
         width: 400px;
         height: 400px;
         position: relative;
         box-shadow: 0 0 5px #000;
         float: left;
-        margin-left: 300px;
+        margin-left:100px;
+        z-index: 10;
         img{
             width: 400px;
             height: 400px;
@@ -285,7 +302,7 @@ body{
             top: 0;
             z-index: 1;	
             display: none;
-            background-image: url(images/timg.jpg);
+            // background-image: url(images/timg.jpg);
             background-size: 400px 400px;
             background-repeat: no-repeat;
         }

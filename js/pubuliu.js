@@ -55,8 +55,8 @@ WaterFull.prototype.renderPage = function () {
     console.log(list)
     for (var i = this.page_num * 20; i <= this.page_num * 20 + 19; i++) {
         html+=`
-        <li class="ud-anim">
-            <img src="${list[i].photo}" alt="${list[i].transtion}" data-id=${i}>
+        <li class="ud-anim" data-id="${i}">
+            <img src="${list[i].photo}" alt="${list[i].transtion}" data-id="${i}">
             <a href="#" class="dis-txt">${list[i].transtion}</a>
             <p class="dis-price">
                 <span class="mod-price"><i>￥</i><span>${list[i].price}</span></span>
@@ -66,20 +66,35 @@ WaterFull.prototype.renderPage = function () {
     }
     this.ul.innerHTML += html;
     this.rendering = false;
+    // console.log(html)
 }
 var waterFull = new WaterFull();
 waterFull.init();	
 
-var oLi=document.querySelector(".ud-anim");
-oLi.onclick=function(evt){
+
+
+var oLis=document.getElementById("lis");
+console.log(oLis);
+
+oLis.onclick=function(evt){
+    console.log(111)
     var e = evt || window.event;
-    var img = document.querySelectorAll(".ud-anim img");
+    var target = e.target || e.srcElement;
+//   /  var target = e.target || srcElement;
+    var img = document.querySelectorAll("#lis img");
     var imgArry = Array.from(img);
+    console.log(imgArry)
+    console.log(target.getAttribute("data-id"));
+    
     // var title = document.querySelectorAll(".proListSearch .proName");
     // var titleArry = Array.from(title);
-    var target = e.target || e.srcElement;
+    
     if(imgArry.indexOf(target) != -1){
     cookie("goodsId",target.getAttribute("data-id"));
-    location.href= "http://www.baidu.com";
+    location.href= "xiangqingye.html";
+    
     }
     }
+    // $(".ud-anim img").on("click",function(){
+    //     location.href="http://www.baidu.com"
+    // })

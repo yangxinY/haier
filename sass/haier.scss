@@ -53,6 +53,9 @@ body{
     font-size:12px;
     color: #333333;   
 }
+.top-bar .location-wrap i a:hover{
+    color: #194999;
+}
 
 .top-bar .bar-links{
     width: 931px;
@@ -71,6 +74,9 @@ body{
     font-size: 12px;
     color:#999999; 
     display: inline-block;
+}
+.top-bar .bar-links a:hover{
+    color:#2979ff;
 }
 .top-bar .bar-links .links-space{
     width: 1px;
@@ -394,7 +400,7 @@ body{
     height: 430px;
     float: left;
 }
-.banner-slidewrap{
+.banner-sliderwrap{
     width: 952px;
     height: 430px;
     position: relative;
